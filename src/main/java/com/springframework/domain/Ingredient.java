@@ -23,6 +23,12 @@ public class Ingredient {
     @JoinColumn(name = "recipe_id")
     private Recipe recipe;
 
+    public Ingredient(String description, BigDecimal amount, UnitOfMeasure unitOfMeasure) {
+        this.description = description;
+        this.unitOfMeasure = unitOfMeasure;
+        this.amount = amount;
+    }
+
     public Long getId() {
         return id;
     }

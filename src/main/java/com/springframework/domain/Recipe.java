@@ -1,6 +1,8 @@
 package com.springframework.domain;
 
 import javax.persistence.*;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Set;
 
 /**
@@ -19,6 +21,8 @@ public class Recipe {
     private Integer cookTime;
     private Integer servings;
     private String source;
+
+    @Lob
     private String directions;
     private String url;
 
@@ -130,6 +134,9 @@ public class Recipe {
     }
 
     public Set<Ingredient> getIngredients() {
+        if(ingredients == null){
+            ingredients = new HashSet<>();
+        }
         return ingredients;
     }
 
@@ -138,10 +145,33 @@ public class Recipe {
     }
 
     public Set<Category> getCategories() {
+
+        if(categories == null){
+            categories = new HashSet<>();
+        }
         return categories;
     }
 
     public void setCategories(Set<Category> categories) {
         this.categories = categories;
+    }
+
+    @Override
+    public String toString() {
+        return "Recipe{" +
+                "id=" + id +
+                ", description='" + description + '\'' +
+                ", preTime=" + preTime +
+                ", cookTime=" + cookTime +
+                ", servings=" + servings +
+                ", source='" + source + '\'' +
+                ", directions='" + directions + '\'' +
+                ", url='" + url + '\'' +
+                ", difficulty=" + difficulty +
+                ", image=" + Arrays.toString(image) +
+                ", notes=" + notes +
+                ", ingredients=" + ingredients +
+                ", categories=" + categories +
+                '}';
     }
 }
