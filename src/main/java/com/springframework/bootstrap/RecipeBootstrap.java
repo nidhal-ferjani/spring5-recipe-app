@@ -105,13 +105,12 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                 "are particularly large.");
 
         guacRecipe.setNotes(guacNotes);
-        guacNotes.setRecipe(guacRecipe);
 
-        guacRecipe.getIngredients().add(new Ingredient("recipe avocado",new BigDecimal(10),cupUom));
-        guacRecipe.getIngredients().add(new Ingredient("Texture is key",new BigDecimal(14),tableSpoonUom));
-        guacRecipe.getIngredients().add(new Ingredient("Skip the tomato and garlic",new BigDecimal(10),pinchUom));
-        guacRecipe.getIngredients().add(new Ingredient("Get your lime-to-avocado ratio ",new BigDecimal(10),cupUom));
-        guacRecipe.getIngredients().add(new Ingredient("Season sufficiently",new BigDecimal(10),ounceUom));
+        guacRecipe.addIngredient(new Ingredient("recipe avocado",new BigDecimal(10),cupUom));
+        guacRecipe.addIngredient(new Ingredient("Texture is key",new BigDecimal(14),tableSpoonUom));
+        guacRecipe.addIngredient(new Ingredient("Skip the tomato and garlic",new BigDecimal(10),pinchUom));
+        guacRecipe.addIngredient(new Ingredient("Get your lime-to-avocado ratio ",new BigDecimal(10),cupUom));
+        guacRecipe.addIngredient(new Ingredient("Season sufficiently",new BigDecimal(10),ounceUom));
 
         guacRecipe.getCategories().add(americanCategory);
         guacRecipe.getCategories().add(mexicanCategory);
@@ -139,12 +138,11 @@ public class RecipeBootstrap implements ApplicationListener<ContextRefreshedEven
                  "are particularly large.");
 
         tacosRecipe.setNotes(tacosNotes);
-        tacosNotes.setRecipe(tacosRecipe);
 
-        tacosRecipe.getIngredients().add(new Ingredient("recipe avocado",new BigDecimal(10),cupUom));
-        tacosRecipe.getIngredients().add(new Ingredient("Texture is key",new BigDecimal(14),tableSpoonUom));
-        tacosRecipe.getIngredients().add(new Ingredient("Skip the tomato and garlic",new BigDecimal(10),pinchUom));
-        tacosRecipe.getIngredients().add(new Ingredient("Get your lime-to-avocado ratio ",new BigDecimal(10),cupUom));
+        tacosRecipe.addIngredient(new Ingredient("recipe avocado",new BigDecimal(10),cupUom));
+        tacosRecipe.addIngredient(new Ingredient("Texture is key",new BigDecimal(14),tableSpoonUom));
+        tacosRecipe.addIngredient(new Ingredient("Skip the tomato and garlic",new BigDecimal(10),pinchUom));
+        tacosRecipe.addIngredient(new Ingredient("Get your lime-to-avocado ratio ",new BigDecimal(10),cupUom));
 
         tacosRecipe.getCategories().add(americanCategory);
 

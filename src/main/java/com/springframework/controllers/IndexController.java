@@ -1,6 +1,5 @@
 package com.springframework.controllers;
 
-import com.springframework.domain.Recipe;
 import com.springframework.services.RecipeService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,12 +27,12 @@ public class IndexController {
         System.out.println("Cat id is : " + categoryOptional.get().getId());
         System.out.println("UOM id is : " + unitOfMeasureOptional.get().getId());*/
 
-        System.out.println("=============================================================================");
+       /* System.out.println("=============================================================================");
 
         for(Recipe recipe : recipeService.getRecipes()){
             System.out.println("Recipe : " + recipe);
             System.out.println("=============================================================================");
-        }
+        }*/
         model.addAttribute("recipes", recipeService.getRecipes());
         return "index";
     }
